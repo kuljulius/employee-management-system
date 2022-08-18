@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div align="center">
+    <a th:href="@{/showNewEmployeeForm}"> add employee</a>
+    <table>
+        <thead>
+        <tr>
+            <th>Employee first name</th>
+            <th>Employee last name</th>
+            <th>Employee email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee : ${employees}">
+            <td th:text="{employee.first_name}"></td>
+            <td  th:text="${employee.lastame}"></td>
+            <td th:text="${employee.email}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
